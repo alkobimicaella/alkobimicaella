@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Confirmation</h1>
+  </header>
+  
+  <main>
+    <div class="products">
+      <div class="product">
+        <img src="backstage.jpg" alt="Product 1">
+        <h2>Micaella Alkobi</h2>
+        <p>$0.99</p>
+        <button class="add-to-cart" data-price="0.99">Invite</button>
+      </div>
+      
+    </div>
+    
+    <div class="cart">
+      <h2>Token</h2>
+      <ul class="cart-items">
+        <!-- Cart items will be added dynamically using JavaScript -->
+      </ul>
+      <p>Total: $<span id="cart-total">0.00</span></p>
+      <div id="paypal-button-container"></div>
+    </div>
+  </main>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=AeU4fu73TBDAqmMexBj_GV7cTUMqtmRcasLKUthDLOew-0Pvi2hpvSY6dkAFQzmhjsjxmhuNVMoeXUjB"></script>
+  <script src="confirmation.js"></script>
+</body>
+</html>

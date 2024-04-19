@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.products {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.product {
+  margin-bottom: 1rem;
+}
+
+.product img {
+  width: 100px;
+}
+
+.cart {
+  flex: 1;
+}
+
+.cart-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-items li {
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(images\ \(4\).jpg); /* Replace 'background.jpg' with the path to your background image */
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.5); /* Adding some transparency to make the text more readable */
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Rest of your CSS styles */

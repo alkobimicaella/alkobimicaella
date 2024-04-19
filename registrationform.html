@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration and Login Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(images\ \(4\).jpg);
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 300px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            display: block;
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .switch-form {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .switch-form a {
+            color: #007bff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="registerContainer">
+        <h2 style="text-align: center;">Registration Form</h2>
+        <form id="registrationForm" onsubmit="handleRegistration(event)">
+            <div class="form-group">
+                <label for="regName">Name:</label>
+                <input type="text" id="regName" name="regName" required>
+            </div>
+            <div class="form-group">
+                <label for="regEmail">Email:</label>
+                <input type="email" id="regEmail" name="regEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="regPassword">Password:</label>
+                <input type="password" id="regPassword" name="regPassword" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <div class="switch-form">
+            <a onclick="toggleForm()">Switch to Login</a>
+        </div>
+    </div>
+    <div class="container" id="loginContainer" style="display: none;">
+        <h2 style="text-align: center;">Login Form</h2>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <div class="form-group">
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" name="loginEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <div class="switch-form">
+            <a onclick="toggleForm()">Switch to Registration</a>
+        </div>
+    </div>
+    <script>
+        function handleRegistration(event) {
+            event.preventDefault(); // prevent default form submission
+            
+            // Get form values
+            const name = document.getElementById('regName').value;
+            const email = document.getElementById('regEmail').value;
+            const password = document.getElementById('regPassword').value;
+            
+            // You can perform validation here if needed
+            
+            // Store data in local storage (or you can send it to a server)
+            localStorage.setItem('name', name);
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
+            
+            // Redirect to another page
+            window.location.href = 'index.html';
+        }
+
+        function handleLogin(event) {
+            event.preventDefault(); // prevent default form submission
+            
+            // Get form values
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            // You can perform validation here if needed
+            // For simplicity, just log the email and password for now
+            console.log('Email:', email);
+            console.log('Password:', password);
+            
+            // Redirect to another page
+            window.location.href = 'https://spankbang.com/7ponh/video/the+beginning+by+one+ok+rock+featuring+ameri+ichinose'; // Assuming this is your dashboard page
+        }
+
+        function toggleForm() {
+            const registerContainer = document.getElementById('registerContainer');
+            const loginContainer = document.getElementById('loginContainer');
+            
+            if (registerContainer.style.display === 'none') {
+                registerContainer.style.display = 'block';
+                loginContainer.style.display = 'none';
+            } else {
+                registerContainer.style.display = 'none';
+                loginContainer.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
